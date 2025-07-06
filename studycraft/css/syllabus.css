@@ -1,0 +1,114 @@
+/* Syllabus Page Specific Styling (Light Theme) */
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+.syllabus-container {
+    padding: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+input[type="file"] {
+    border: 2px dashed var(--border-color);
+    padding: 1.2rem;
+    border-radius: 10px;
+    background-color: #F8F9FA; /* Very light background for file input */
+    width: calc(100% - 2.4rem);
+    text-align: center;
+    color: var(--light-text-color);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(108, 106, 254, 0.05); /* Very subtle light tint on hover */
+}
+
+.loading-indicator {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.spinner {
+    border: 6px solid rgba(0, 0, 0, 0.1); /* Thicker spinner, light grey border */
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.plan-output {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 6px solid var(--primary-color);
+    border-radius: 12px;
+}
+
+.plan-output h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#generated-plan-text {
+    white-space: pre-wrap;
+    background-color: #F8F9FA; /* Very light background for code/plan */
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+#view-full-plan-button {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    input[type="file"] {
+        padding: 1rem;
+        width: calc(100% - 2rem);
+    }
+    #generated-plan-text {
+        max-height: 250px;
+        padding: 1rem;
+    }
+    .syllabus-container {
+        padding: 1.5rem;
+    }
+}

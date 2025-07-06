@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCraft - AI That Converts Syllabus into Smart To-Do Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="logo11.png" alt="StudyCraft Logo" class="navbar-logo">
+            </a>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="todolist.html">To-Do List</a></li>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="studyplan.html">Study Plan</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="bot.html">Dost</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="login.html" class="btn primary-btn login-btn">Log In</a></li>
+                <li><a href="login.html" class="btn primary-btn signup-btn">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 70px;"></div>
+
+    <div class="container main-content-area">
+        <!-- Hero Section -->
+        <section class="hero-section new-design-hero">
+            <div class="hero-sec">
+            <div class="hero-content">
+                <p class="small-info">100+ Students Joined the Platform 🧑‍🎓👩‍🎓</p>
+                <h1 class="hero-main-title">Learn and teach anywhere from any device</h1>
+                <p class="hero-secondary-text">Schedule, homework, statistics and your favourite teachers all in one place.</p>
+
+                <div class="subject-search-bar">
+                    <input type="text" id="subject-input" placeholder="Choose the subject" class="subject-input" list="subject-options">
+                    <datalist id="subject-options">
+                        <option value="Programming"></option>
+                        <option value="Class 12th JEE"></option>
+                        <option value="NEET"></option>
+                        <option value="UPSC"></option>
+                        <option value="SSC"></option>
+                        <option value="State PCS"></option>
+                    </datalist>
+                    <button class="search-button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="model">
+                <img src="model.png">
+            </div>
+        </div>
+        </section>
+
+ <!-- New: Syllabus Output Section -->
+ <section id="syllabus-output-section" class="syllabus-output-section" style="display: none;">
+    <div id="syllabus-loading-indicator" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>Generating syllabus for your subject...</p>
+    </div>
+    <div id="syllabus-content" class="syllabus-content card">
+        <h2>Syllabus for <span id="syllabus-subject-title"></span></h2>
+        <pre id="generated-syllabus-text"></pre>
+    </div>
+</section>
+
+        <!-- Popular Subjects Section -->
+        <section class="popular-subjects-section">
+            <h2>Popular Exams</h2>
+            <div class="subjects-grid">
+                <div class="subject-item">
+                    <img src="programming.avif" alt="Programming Icon">
+                    <span>Coding Tests</span>
+                </div>
+                <div class="subject-item">
+                    <img src="math.avif" alt="Math Icon">
+                    <span>SAT</span>
+                </div>
+                <div class="subject-item">
+                    <img src="english.jpg" alt="English Icon">
+                    <span>Ilets</span>
+                </div>
+                <div class="subject-item">
+                    <img src="neet.png" alt="Chemistry Icon">
+                    <span>Neet</span>
+                </div>
+                <div class="subject-item">
+                    <img src="pcs.jpg" alt="French Icon">
+                    <span>State PCS</span>
+                </div>
+                <div class="subject-item">
+                    <img src="Jee-advanced.jpg" alt="Law Icon">
+                    <span>IIT-JEE</span>
+                </div>
+                <div class="subject-item">
+                    <img src="upsc.png" alt="Physics Icon">
+                    <span>UPSC</span>
+                </div>
+                <div class="subject-item">
+                    <img src="ssc.avif" alt="Economics Icon">
+                    <span>SSC-CGL</span>
+                </div>
+                <div class="subject-item">
+                    <img src="nda.png" alt="Drawing Icon">
+                    <span>NDA</span>
+                </div>
+                <div class="subject-item">
+                    <img src="ca.png" alt="History Icon">
+                    <span>CA</span>
+                </div>
+            </div>
+        </section>
+
+       
+        <!-- Your original content goes below the new sections, if still desired -->
+        <div class="expanded-features-section">
+            <h2>Deep Dive into StudyCraft Features</h2>
+            <div class="feature-detail-grid">
+                <div class="feature-detail-card">
+                    <h3>Dynamic Study Plan Generation</h3>
+                    <p>Beyond just a schedule, our AI analyzes your syllabus content, identifies key topics, and allocates study time based on estimated difficulty and your exam date. It even considers your daily availability to create a truly personalized and achievable plan.</p>
+                </div>
+                <div class="feature-detail-card">
+                    <h3>Interactive To-Do & Kanban Boards</h3>
+                    <p>Seamlessly transition from your generated study plan to an actionable to-do list. Our Kanban board allows for intuitive drag-and-drop task management, helping you visualize "To Do," "In Progress," and "Done" tasks at a glance. Stay organized and motivated.</p>
+                </div>
+                <div class="feature-detail-card">
+                    <h3>Intelligent AI Tutoring</h3>
+                    <p>Stuck on a concept? Our integrated AI chatbot isn't just for FAQs. It's designed to provide in-depth explanations, break down complex topics, offer examples, and even quiz you on your understanding, acting as your personal 24/7 tutor.</p>
+                </div>
+                <div class="feature-detail-card">
+                    <h3>Comprehensive Progress Analytics</h3>
+                    <p>See your hard work pay off with visual progress charts. Track completed tasks, monitor your study streaks, and gain insights into your learning patterns. Our analytics help you stay accountable and celebrate milestones on your journey.</p>
+                </div>
+                <div class="feature-detail-card">
+                    <h3>Customizable Study Environment</h3>
+                    <p>Tailor StudyCraft to your preferences. Adjust notification settings, set preferred study hours, and switch between light and dark themes (like our sleek Coinbase-inspired dark mode!) to create the perfect study ambiance.</p>
+                </div>
+            </div>
+        </div>
+<div class="landing-image-1">
+    <img src="land1.png">
+</div>
+        <div class="study-for-exam-section">
+            <h2>Ready to Ace Your Exams?</h2>
+            <p class="section-description">StudyCraft is built to simplify your preparation, reduce stress, and maximize your learning efficiency. Here's how to make the most of it:</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <h3>1. Upload Your Syllabus</h3>
+                    <p>Start by providing your course syllabus and exam date. Our AI needs this to understand your study scope.</p>
+                    <a href="syllabus.html" class="btn primary-btn btn-sm">Upload Now</a>
+                </div>
+                <div class="step-card">
+                    <h3>2. Review Your Study Plan</h3>
+                    <p>Get a customized daily breakdown of topics. Adjust as needed to fit your life.</p>
+                    <a href="studyplan.html" class="btn secondary-btn btn-sm">View Plan</a>
+                </div>
+                <div class="step-card">
+                    <h3>3. Engage with AI Bot</h3>
+                    <p>Use the chatbot for instant clarifications, concept explanations, and quick quizzes.</p>
+                    <a href="bot.html" class="btn primary-btn btn-sm">Chat Now</a>
+                </div>
+                <div class="step-card">
+                    <h3>4. Track Your Progress</h3>
+                    <p>Mark tasks complete and watch your progress charts grow, keeping you motivated.</p>
+                    <a href="progress.html" class="btn secondary-btn btn-sm">Track Progress</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="positivity-quotes-section">
+            <h2>Daily Dose of Positivity</h2>
+            <div class="quote-carousel">
+                <div class="quote-card">
+                    <p>"The beautiful thing about learning is that no one can take it away from you."</p>
+                    <span>- B.B. King</span>
+                </div>
+                <div class="quote-card">
+                    <p>"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
+                    <span>- Winston S. Churchill</span>
+                </div>
+                <div class="quote-card">
+                    <p>"Believe you can and you're halfway there."</p>
+                    <span>- Theodore Roosevelt</span>
+                </div>
+                <div class="quote-card">
+                    <p>"The only way to do great work is to love what you do."</p>
+                    <span>- Steve Jobs</span>
+                </div>
+            </div>
+            <button class="btn primary-btn" id="next-quote-btn">Next Quote</button>
+        </div>
+
+        <div class="author-section">
+            <h2>About the Founder</h2>
+            <div class="author-info">
+                <img src="IMG_1688.JPG" alt="Author Name" class="author-image">
+                <div class="author-details">
+                    <h3>AI StudyCraft Founder</h3>
+                    <p>Mohit is the visionary founder behind StudyCraft, an innovative AI solution designed to transform how students approach their studies. With a keen understanding of the challenges students face in planning and executing their study routines, Mohit conceived StudyCraft to streamline this process. His unique project idea focuses on leveraging AI to convert a syllabus into a smart, personalized to-do journey, addressing the common problem of students spending more time planning than studying. Mohit's goal with StudyCraft is to empower students with an intelligent tool that dynamically adapts to their needs, ensuring a more efficient and effective learning experience.</p>
+                    <div class="author-links">
+                        <a href="about-founder.html" class="author-link">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <h3>StudyCraft</h3>
+                <p>Your AI-powered companion for smart study planning and progress tracking. Transform your syllabus into success.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="todolist.html">To-Do List</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li><a href="studyplan.html">Study Plan</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="bot.html">Bot</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="fb.png" alt="Facebook"></a>
+                    <a href="#"><img src="x.webp" alt="Twitter"></a>
+                    <a href="#"><img src="in.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="ig.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Have a Query?</h3>
+                <p>Email: <a href="mailto:mohittt0011@gmail.com">support@studycraft.com</a></p>
+                <p>Feedback: <a href="mailto:mohittt0011@gmail.com">feedback@studycraft.com</a></p>
+                <p>Address: 232, jawahar nagar, teshil camp, panipat</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudyCraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

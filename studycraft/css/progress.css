@@ -1,0 +1,107 @@
+/* Progress Page Specific Styling (Light Theme) */
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+.progress-container {
+    padding: 2.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.progress-info {
+    text-align: center;
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.progress-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background-color: var(--card-background); /* White background */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h3 {
+    color: var(--text-color); /* Dark text */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.stat-card .stat-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.chart-container {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: var(--card-background); /* White background */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    border-top: 5px solid var(--primary-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.chart-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Ensure canvas takes available space within container */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .progress-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .stat-card {
+        padding: 1.5rem;
+    }
+    .stat-card .stat-value {
+        font-size: 2.8rem;
+    }
+    .chart-container {
+        padding: 1.5rem;
+    }
+    .chart-container h2 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .progress-container {
+        padding: 1.5rem;
+    }
+}

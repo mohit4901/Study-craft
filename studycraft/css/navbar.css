@@ -1,0 +1,171 @@
+/* Navbar Styling (Light Theme) */
+.navbar {
+    position: fixed;
+    top: 0;
+    font-family: "DM Sans", sans-serif;
+    width: 100%;
+    background-color: var(--card-background); /* White background */
+    color: var(--text-color); /* Dark text */
+    padding: 0.8rem 0;
+    z-index: 1000;
+    justify-content:space-evenly;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid var(--border-color); /* Light border */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.btn .primary-btn .signup-btn{
+    padding:2rem;
+    border-radius:0.3rem;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.navbar-logo {
+    height: 35px; /* Adjusted size for light theme design */
+    width: auto;
+    margin-right: 0;
+    filter: none; /* Remove filter, assuming dark logo on transparent background */
+    transition: transform 0.2s ease;
+}
+.navbar-container img{
+    height:100px;
+}
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-brand {
+    text-decoration: none;
+}
+.navbar-brand span { /* Visually hide text if using image logo */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color); /* Dark text for links */
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color); /* Dark bars for hamburger menu */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation for menu toggle (hamburger to cross) */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--card-background); /* White background for mobile menu */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.8rem 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding-bottom: 0;
+        color: var(--text-color);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

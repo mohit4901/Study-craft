@@ -1,0 +1,150 @@
+/* Login/Sign Up Page Specific Styling (Light Theme) */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px - 4rem); /* Adjust for navbar and footer space */
+    padding: 2rem 1.5rem;
+    background-color: var(--background-color); /* Main background color */
+    box-shadow: none; /* Remove container shadow */
+    border: none; /* Remove container border */
+    margin-top: 0; /* Remove default container margin */
+    margin-bottom: 0;
+}
+
+.auth-card {
+    background-color: var(--card-background); /* White background for the card */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light); /* Soft shadow */
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px; /* Max width for the form card */
+    text-align: center;
+    border: 1px solid var(--border-color); /* Subtle border */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card h1 {
+    color: var(--primary-color); /* Primary color for title */
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: calc(100% - 22px); /* Adjust for padding/border */
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #F8F9FA; /* Very light input background */
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 106, 254, 0.2);
+    outline: none;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.9rem;
+    margin-top: -1rem; /* Adjust margin to be closer to input */
+    margin-bottom: 1rem;
+    text-align: left;
+    height: 1.2em; /* Reserve space to prevent layout shifts */
+}
+
+.auth-toggle {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.auth-toggle a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-toggle a:hover {
+    color: var(--primary-hover-color);
+    text-decoration: underline;
+}
+
+/* User Info Display */
+.user-info-display {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.user-info-display h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.user-info-display p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.user-info-display span {
+    font-weight: 600;
+    word-break: break-all; /* Allow long IDs to wrap */
+}
+
+.user-info-display button {
+    margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .auth-card {
+        padding: 1.5rem;
+        margin: 0 1rem; /* Add horizontal margin on small screens */
+    }
+
+    .auth-card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .auth-form input {
+        padding: 10px;
+    }
+
+    .auth-form button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}

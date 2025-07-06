@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCraft - Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caesar+Dressing&family=Comforter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Foldit:wght@100..900&family=Grechen+Fuemen&family=Jura:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Solid:wght@100;300;400;900&family=Love+Light&family=Michroma&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sedgwick+Ave+Display&family=Sigmar&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="logo11.png" alt="StudyCraft Logo" class="navbar-logo">
+            </a> <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="todolist.html">To-Do List</a></li>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="studyplan.html">Study Plan</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="bot.html">Dost</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 60px;"></div>
+
+    <div class="container settings-container">
+        <h1>Settings</h1>
+
+        <div class="card setting-section">
+            <h2>General Preferences</h2>
+            <div class="form-group">
+                <label for="preferred-study-time">Preferred Daily Study Time (hours):</label>
+                <input type="number" id="preferred-study-time" min="1" max="10" value="3">
+            </div>
+            <div class="form-group">
+                <label for="theme-select">App Theme:</label>
+                <select id="theme-select">
+                    <option value="light">Light (Default)</option>
+                  
+                </select>
+            </div>
+        </div>
+
+        <div class="card setting-section">
+            <h2>Notification Settings</h2>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="enable-reminders">
+                <label for="enable-reminders">Enable Study Reminders</label>
+            </div>
+            <div class="form-group">
+                <label for="reminder-frequency">Reminder Frequency (minutes):</label>
+                <input type="number" id="reminder-frequency" min="30" value="60">
+            </div>
+        </div>
+
+        <div class="card setting-section">
+            <h2>AI & Data</h2>
+            <p>Your data is processed to generate personalized study plans and chatbot responses.</p>
+            <button class="btn secondary-btn" id="clear-data-button">Clear All Local Data</button>
+            <p class="clear-data-warning">Warning: This will clear all your saved tasks, plans, and settings locally.</p>
+        </div>
+
+        <button id="save-settings-button">Save Settings</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

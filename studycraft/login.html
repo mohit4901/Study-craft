@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCraft - Login / Sign Up</title>
+    <!-- Existing font imports from your other HTML files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Your existing CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- New CSS for login/signup page -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Navbar (copied from your existing HTML files) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="logo11.png" alt="StudyCraft Logo" class="navbar-logo">
+            </a>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="todolist.html">To-Do List</a></li>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="studyplan.html">Study Plan</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="bot.html">Dost</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="login.html" class="btn primary-btn login-btn">Log In</a></li>
+                <li><a href="login.html" class="btn primary-btn signup-btn">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 70px;"></div> <!-- Spacer for fixed navbar -->
+
+    <div class="container auth-container">
+        <div class="auth-card">
+            <h1 id="auth-title">Login to StudyCraft</h1>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <p id="login-error-message" class="error-message"></p>
+                <button type="submit" id="login-button">Login</button>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password:</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <p id="signup-error-message" class="error-message"></p>
+                <button type="submit" id="signup-button">Sign Up</button>
+            </form>
+
+            <div class="auth-toggle">
+                <p id="toggle-text">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Info Display (for multi-user apps, mandatory to show userId) -->
+    <div class="container user-info-display" style="display: none;">
+        <h2>Current User Info</h2>
+        <p>User ID: <span id="current-user-id"></span></p>
+        <p>Email: <span id="current-user-email"></span></p>
+        <button id="logout-button" class="btn secondary-btn">Logout</button>
+    </div>
+
+    <!-- Your existing JS files -->
+    <script src="js/main.js"></script>
+    <!-- New JS for login/signup functionality -->
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

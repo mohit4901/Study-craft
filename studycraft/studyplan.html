@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCraft - Your Study Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caesar+Dressing&family=Comforter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Foldit:wght@100..900&family=Grechen+Fuemen&family=Jura:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Solid:wght@100;300;400;900&family=Love+Light&family=Michroma&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sedgwick+Ave+Display&family=Sigmar&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/studyplan.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="logo11.png" alt="StudyCraft Logo" class="navbar-logo">
+            </a>  <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="todolist.html">To-Do List</a></li>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="studyplan.html">Study Plan</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="bot.html">Dost</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 60px;"></div>
+
+    <div class="container studyplan-container">
+        <h1>Your Personalized Study Plan</h1>
+        <p class="plan-info">Organized by our AI. Drag and drop tasks to update progress!</p>
+
+        <div class="kanban-board" id="kanban-board">
+            <div class="kanban-column" id="to-do-column">
+                <h2>To Do</h2>
+                <div class="tasks" data-status="todo">
+                    </div>
+            </div>
+            <div class="kanban-column" id="in-progress-column">
+                <h2>In Progress</h2>
+                <div class="tasks" data-status="inprogress">
+                    </div>
+            </div>
+            <div class="kanban-column" id="done-column">
+                <h2>Done</h2>
+                <div class="tasks" data-status="done">
+                    </div>
+            </div>
+        </div>
+
+        <button id="reshuffle-plan-button" class="btn secondary-btn">Reshuffle Plan (AI)</button>
+        <p class="reshuffle-info">If you skip topics, click here to let AI adjust your plan.</p>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/studyplan.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+/* Index Page Specific Styling - Based on design.webp (Light Theme) */
+
+/* Adjusting overall container padding and background for the index page */
+.container.main-content-area {
+    background-color: var(--background-color); /* Main background color */
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+
+
+/* Hero Section Styling - Top part of the design.webp */
+.hero-section.new-design-hero {
+    text-align: left;
+    padding: 1rem 1.5rem ; /* More vertical padding */
+    background: none; /* Remove previous gradient */
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: -7.0rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px; /* Ensure a good height for the hero area */
+    background-color: var(--background-color); /* Consistent background */
+}
+
+/* Background image for the hero section (the laptop mock-up) */
+.hero-section.new-design-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* More subtle in light theme */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Bring content to front */
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none; /* Remove text shadow for light theme */
+}
+
+.hero-sec{
+    display:flex;
+}
+.subject-search-bar{
+margin-right:17rem;
+}
+.model img{
+height:900px;
+margin-bottom:5rem;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+mask-image: linear-gradient(to bottom,
+rgba(0,0,0,1) 0%,     /* Fully opaque at the bottom */
+rgba(0,0,0,1) 30%,    /* Opaque up to 30% from the bottom */
+rgba(0,0,0,0) 70%,    /* Starts fading to transparent at 70% */
+rgba(0,0,0,0) 100%    /* Fully transparent at the top */
+);
+-webkit-mask-image: linear-gradient(to bottom,
+rgba(0,0,0,1) 0%,
+rgba(0,0,0,1) 30%,
+rgba(0,0,0,1) 70%,
+rgba(0,0,0,0) 100%
+);
+}
+.small-info {
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right:18rem;
+    background-color: rgba(0, 0, 0, 0.03); /* Very subtle light background */
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.hero-main-title {
+    font-size: 3.8rem;
+    color: var(--text-color); /* Use main text color */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    /* Removed gradient text as per design.webp, it's solid dark text */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.hero-secondary-text {
+    font-size: 1.4rem;
+    color: var(--light-text-color);
+    margin-bottom: 3rem;
+    margin-right:17rem;
+    max-width: 600px;
+}
+
+.subject-search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 550px; /* Width similar to design */
+    background-color: var(--card-background); /* White background */
+    border-radius: 12px;
+    padding: 8px; /* Padding inside the bar */
+    border: 1px solid var(--border-color); /* Light border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    overflow: hidden;
+}
+
+.subject-search-bar input {
+    flex-grow: 1;
+    padding: 12px 20px; /* Larger padding for input */
+    border: none;
+    background-color: transparent; /* Transparent input background */
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    outline: none;
+}
+
+.subject-search-bar input::placeholder {
+    color: var(--light-text-color);
+    opacity: 0.7;
+}
+
+.subject-search-bar button.search-button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 25px; /* Larger padding for button */
+    border-radius: 8px; /* Slightly smaller radius for button inside bar */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: none; /* Remove individual button shadow here */
+}
+
+.subject-search-bar button.search-button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(0); /* No transform on hover for button inside bar */
+}
+
+.subject-search-bar button.search-button img {
+    height: 24px;
+    width: 24px;
+    filter: none; /* Remove filter, assuming dark icon on light button */
+}
+
+
+/* Popular Subjects Section */
+.popular-subjects-section {
+    padding: 3rem 1.5rem ;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    margin-top: 8rem;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    border: 1px solid var(--border-color);
+}
+
+.popular-subjects-section h2 {
+    font-size: 2.2rem;
+    color: var(--text-color); /* Dark text for heading */
+    margin-bottom: 3rem;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax for more items per row */
+    gap: 2.5rem;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.subject-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--background-color); /* Use light background for subject items */
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color); /* Light border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    width: 150px; /* Fixed width for better grid alignment */
+    height: 180px; /* Fixed height */
+    justify-content: center;
+}
+
+.subject-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #E9EBF1; /* Slightly darker background on hover */
+}
+
+.subject-item img {
+    width: 100px;
+    height: 100px;
+    filter: none;
+    border-radius:50%; /* Remove filter. Icons should be dark on light background */
+}
+
+.subject-item span {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Specific styling for the Log In and Sign Up buttons in the navbar */
+.nav-links .primary-btn.login-btn,
+.nav-links .primary-btn.signup-btn {
+    padding: 8px 18px; /* Smaller padding for navbar buttons */
+    font-size: 1rem; /* Smaller font size */
+    border-radius: 6px;
+    margin-left: 1rem; /* Space them out */
+    box-shadow: none; /* Remove shadow */
+    transform: none; /* Remove transform */
+}
+
+.nav-links .primary-btn.signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-links .primary-btn.login-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--light-text-color);
+}
+
+.nav-links .primary-btn.login-btn:hover {
+    background-color: var(--primary-color); /* Full primary color on hover */
+    color: white;
+    border-color: var(--primary-color);
+}
+.landing-image-1 img{
+align-items: center;
+justify-content: center;
+max-width:1282px;
+height:722px;
+margin-left:12rem;
+
+border-radius:2rem;
+}
+
+/* Existing sections below hero will now be wrapped in .main-content-area */
+.expanded-features-section,
+.study-for-exam-section,
+.positivity-quotes-section,
+.author-section {
+    padding: 3rem 1.5rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    border: 1px solid var(--border-color);
+}
+
+/* Ensure font styles are consistent across all sections */
+.expanded-features-section h2,
+.study-for-exam-section h2,
+.positivity-quotes-section h2,
+.author-section h2 {
+    color: var(--text-color); /* Consistent heading color (dark text) */
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+}
+
+/* Adjust card/grid item styling within these sections for consistency */
+.feature-detail-card,
+.step-card,
+.quote-card {
+    background-color: var(--background-color); /* Use light background for sub-cards */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    padding: 1.8rem;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.step-card .btn {
+    background-color: var(--background-color); /* Use light background for sub-cards */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    padding: 0.5rem;
+    border-radius: 10px;
+    color:black;
+    text-decoration:none;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+}
+.step-card .btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color:white;
+}
+
+
+.feature-detail-card:hover,
+.step-card:hover,
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color:white;
+}
+
+.feature-detail-card h3,
+.step-card h3 {
+    color: var(--primary-color); /* Highlight these headings with primary color */
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.feature-detail-card p,
+.step-card p,
+.quote-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.author-info img{
+height:300px;
+border-radius:1rem;
+}
+
+
+
+/* Responsive adjustments for new elements */
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+    .hero-secondary-text {
+        font-size: 1.2rem;
+    }
+    .subject-search-bar {
+        flex-direction: column;
+        padding: 10px;
+        max-width: 90%;
+    }
+    .subject-search-bar input {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .subject-search-bar button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 15px;
+    }
+    .popular-subjects-section {
+        padding: 2rem 1rem;
+    }
+    .subjects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem;
+    }
+    .subject-item {
+        width: 80px;
+        height: 80px;
+        padding: 1rem 0.5rem;
+    }
+    .subject-item img {
+        width: 35px;
+        height: 35px;
+    }
+    .subject-item span {
+        font-size: 0.9rem;
+    }
+    .expanded-features-section,
+    .study-for-exam-section,
+    .positivity-quotes-section,
+    .author-section {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 2rem;
+    }
+    .hero-secondary-text {
+        font-size: 1rem;
+    }
+    .popular-subjects-section h2 {
+        font-size: 1.8rem;
+    }
+    .subjects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Footer Styling (Light Theme) */
+.footer {
+    background-color: var(--card-background); /* White background for footer */
+    color: var(--text-color);
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color); /* Light border */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: var(--primary-color); /* Primary color for footer headings */
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.95rem;
+    color: var(--light-text-color); /* Lighter grey for footer text */
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    filter: none; /* Remove filter, assuming social icons are colored or dark */
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-contact h3 {
+    margin-bottom: 0.5rem;
+}
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom:-3rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+    .footer-contact {
+        text-align: center;
+    }
+    .footer-contact h3, .footer-contact p {
+        margin-left: 0;
+    }
+}

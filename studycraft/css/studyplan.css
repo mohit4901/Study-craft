@@ -1,0 +1,149 @@
+/* Study Plan Page Specific Styling (Light Theme) */
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+.studyplan-container {
+    padding: 2.5rem;
+}
+
+.plan-info {
+    text-align: center;
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.kanban-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    background-color: var(--card-background); /* White background for columns */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+/* Specific border colors for Kanban columns (Light Theme) */
+#to-do-column { border-color: #FF9500; /* Orange for To Do */ }
+#in-progress-column { border-color: var(--primary-color); /* Primary color for In Progress */ }
+#done-column { border-color: var(--success-color); /* Success green for Done */ }
+
+.kanban-column h2 {
+    text-align: center;
+    color: var(--text-color); /* Dark text for headings */
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.kanban-column .tasks {
+    flex-grow: 1;
+    min-height: 150px;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: var(--background-color); /* Light background for task area */
+    border: 1px dashed var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.task-card {
+    background-color: #F8F9FA; /* Slightly lighter than column background for contrast */
+    border: 1px solid var(--border-color); /* Light border for task cards */
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    color: var(--text-color);
+}
+
+.task-card:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.task-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: var(--primary-color);
+}
+
+.task-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.task-card.dragging {
+    opacity: 0.7;
+    border: 2px dashed var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(108, 106, 254, 0.3); /* Primary color indicator */
+    transform: rotate(2deg);
+}
+
+.reshuffle-plan-button {
+    display: block;
+    margin: 3rem auto 1rem auto;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.reshuffle-info {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--light-text-color);
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column;
+        align-items: center;
+    }
+    .kanban-column {
+        width: 95%;
+        max-width: 450px;
+        min-width: unset;
+    }
+    .kanban-column .tasks {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .studyplan-container {
+        padding: 1.5rem;
+    }
+    .kanban-column {
+        padding: 1rem;
+    }
+    .task-card {
+        padding: 1rem;
+    }
+    .reshuffle-plan-button {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
