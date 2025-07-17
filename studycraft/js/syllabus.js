@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewFullPlanButton = document.getElementById('view-full-plan-button');
 
     
-    const OPENAI_API_KEY = '07881394-1fe8-4d47-a108-930ee112d453'; // Replace with your key for testing
+    const OPENAI_API_KEY = ''; // Replace with your key for testing
     const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 
     generatePlanButton.addEventListener('click', async () => {
