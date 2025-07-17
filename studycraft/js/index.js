@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generatedSyllabusText = document.getElementById('generated-syllabus-text');
 
    
-    const GEMINI_API_KEY = 'AIzaSyCz2o8_6ypoW3wydlnKyjOepGbj0__QO_c'; 
+    const GEMINI_API_KEY = ''; 
     const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 
